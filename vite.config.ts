@@ -28,8 +28,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/components/index.ts'),
-      name: 'elementlib',
-      fileName: (format) => `elementlib.${format}.js`
+      name: 'vself',
+      fileName: (format) => `vself.${format}.js`
     },
     sourcemap: true,
     rollupOptions: {
