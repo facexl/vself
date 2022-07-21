@@ -1,12 +1,26 @@
 {
   "name": "vself",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "version": "0.0.1",
+  "description": "lib base ant-design-pro",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "author": "438944342@qq.com",
+  "license": "MIT",
+  "homepage": "https://github.com/facexl/vself",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:facexl/vself.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "p": "npm publish --access public",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs"
   },
   "dependencies": {
     "vue": "^3.2.37"
