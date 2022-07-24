@@ -6,11 +6,10 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   extends: [
-    // 'eslint:recommended',
     'plugin:vue/vue3-recommended',
   ],
   rules: {
-    'indent': ['error', 2, { SwitchCase: 1 }], // error类型，缩进2个空格
+    'indent': ['error', 2, { SwitchCase: 1 }],
     'vue/multi-word-component-names':'off'
   },
 };

@@ -3,6 +3,7 @@
     <a-button type="primary">
       {{ a }}
     </a-button>
+    <a-form-item />
   </div>
 </template>
 <script lang="ts" setup>
