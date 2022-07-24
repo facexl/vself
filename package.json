@@ -29,11 +29,10 @@
     "vue": "^3.2.37"
   },
   "lint-staged": {
-    "*.ts": [
+    "*.[jt]s": [
       "eslint --fix",
       "git add"
-    ],
-    "*.js": "eslint --fix"
+    ]
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
