@@ -1,0 +1,92 @@
+/**
+    前端通用常用样式
+**/
+
+// 超出省略号
+.elli {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.flex {
+    display: flex;
+}
+.flex-wrap{
+    flex-wrap: wrap;
+}
+.flex-no-wrap{
+    flex-wrap: nowrap;
+}
+.flex-no-shink{
+    flex-shrink: 0;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex1 {
+    flex: 1;
+}
+
+.flex-start{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-around{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mr8 {
+    margin-right: 8px;
+}
+.mr16{
+    margin-right: 16px;
+}
+.mt8{
+    margin-top:8px;
+}
+.mt16{
+    margin-top:16px;
+}
+.ml8{
+    margin-left: 8px;
+}
+.ml16{
+    margin-left: 16px;
+}
+.mb8{
+    margin-bottom: 8px;
+}
+.mb16{
+    margin-bottom: 16px;
+}
+.click-expand{
+    position: relative;
+}
+.click-expand::after{
+  position: absolute;
+  content:' ';
+  left:-20px;
+  right:-20px;
+  top:-20px;
+  bottom:-20px;
+}
+.click-active{
+    &:active{
+        opacity: .5;
+    }
+}
+.danger-color{
+    color:#F56C6C;
+}
