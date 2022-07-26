@@ -10,7 +10,7 @@
 - [x] [commitlint & husky](https://commitlint.js.org/#/guides-local-setup) 做 commit msg [规范](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)检查   
 - [x] 自动 import vue/ant-design-vue 的组件以及类型声明 (`unplugin-auto-import`&`unplugin-vue-components`)  
 - [x] JSX 支持 (`@vitejs/plugin-vue-jsx`)  
-- [ ] 集成 vitepress 编写文档  
+- [x] 集成 vitepress 编写文档  
 - [ ] 集成 Vitest 单元测试  
 
 #### Components  

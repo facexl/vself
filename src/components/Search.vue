@@ -29,6 +29,17 @@
               />
             </a-form-item>
             <a-form-item
+              v-if="item.type==='dateRange'"
+              :name="item.key"
+            >
+              <!-- TODO: 还没对接key -->
+              <a-range-picker
+                v-model:value="searchForm[item.key]"
+                format="YYYY-MM-DD"
+                :placeholder="item.placeholder || ['选择开始时间', '选择结束时间']"
+              />
+            </a-form-item>
+            <a-form-item
               v-if="item.type === 'select'"
               :name="item.key"
             >
@@ -65,20 +76,19 @@
         >
           重置
         </a-button>
-        <span
+        
+        <a-button
           v-if="showOpenTrigger"
-          class="ml8 mr8 open-tag"
-          type="text"
-          size="small"
+          type="link"
           @click="isOpen=!isOpen"
         >
           {{ isOpen?'收起':'展开' }}
-          <a-icon
+          <!-- <a-icon
             class="receive-icon"
             :class="{'open-icon':isOpen}"
-          ><arrow-down /></a-icon>
-        </span>
-        <div class="ml8">
+          ><arrow-down /></a-icon> -->
+        </a-button>
+        <div class="flex ml8">
           <slot />
         </div>
       </div>
@@ -123,7 +133,7 @@ props.searchOptions.forEach(it => {
 
 const calculateOptionsLength = async ()=>{
   const nodeList = leftRef.value.querySelectorAll('.left-item')
-  console.log(nodeList[nodeList.length-1].offsetTop)
+  //   console.log(nodeList[nodeList.length-1].offsetTop)
   // 存在第二行
   if(nodeList[nodeList.length-1].offsetTop !== leftRef.value.offsetTop){
     showOpenTrigger.value = true
@@ -145,7 +155,18 @@ watch(()=>props.searchOptions,async ()=>{
 
 
 const onSearch = ()=>{
-  emit('onSearch',{...searchForm.value})
+  const res = {...searchForm.value}
+  props.searchOptions.forEach(it=>{
+    if(it.type==='dateRange'){
+      if(res[it.key]){
+        const keys = it.key.split('-')
+        res[keys[0]] = res[it.key][0].format('YYYY-MM-DD')
+        res[keys[1]] = res[it.key][1].format('YYYY-MM-DD')
+        delete res[it.key]
+      }
+    }
+  })
+  emit('onSearch',res)
 }
 const reset = ()=>{
   searchRef.value && searchRef.value.resetFields()
@@ -156,7 +177,7 @@ const reset = ()=>{
 
 <style lang="less" scoped>
 .left{
-    max-width:70%;
+    max-width:65%;
     height:50px;
     overflow: hidden;
 }
@@ -172,11 +193,5 @@ const reset = ()=>{
 }
 .open-icon{
     transform: rotate(180deg);
-}
-.open-tag{
-    font-size: 12px;
-    cursor: pointer;
-    color:#1890ff;
-    line-height: 32px;
 }
 </style>
