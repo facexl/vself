@@ -19,10 +19,11 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "p": "npm publish --access public",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "prepare": "husky install"
+    "pub": "npm publish --access public",
+    "prepare": "husky install",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
   },
   "dependencies": {
     "ant-design-vue": "^3.2.10",
@@ -52,6 +53,7 @@
     "unplugin-auto-import": "^0.9.2",
     "unplugin-vue-components": "^0.21.1",
     "vite": "^3.0.0",
+    "vitepress": "^1.0.0-alpha.4",
     "vue-tsc": "^0.38.4"
   }
 }
