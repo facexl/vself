@@ -27,4 +27,32 @@
 - [ ] 可拖拽列表  
 - [ ] Execle 导入导出 sheet.js  
 - [ ] 换肤
+- [ ] color picker
+
+
+xxx 
+- BtnGroup `按钮组`
+- ChooseAddress `地址级联选择`
+- ColorPicker `颜色拾取器`
+- Columns `订单列表风格表格的列表标题`
+- CommonTable `糅合分页、搜索、表格、批量操作的组件`
+- Editor `富文本编辑器`
+- Export `导出`
+- Import `导入`
+- IconFont `字体图标`
+- InputNumberGroup `数字输入组组件，如金额的输入`
+- InputRange `范围输入组件`
+- LinesEllipsis `文本过长省略号`
+- Loader `页面初始大 loading`
+- MutipulBtns `列表批量操作按钮组`
+- PageTitle `遵从 UI 规范的页面标题 自动匹配路由标题`
+- Pagination `分页组件`
+- PreviewImg `图片预览组件`
+- ScrollBar `滚动组件？？`
+- SearchForm `搜索组件`
+- TableDropDown `表格更多操作的下拉`
+- TabsBar `tabs`
+- UploadImg `图片上传`
+- FSwitch `好用版 switch `
 #### Functions  
+

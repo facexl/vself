@@ -1,5 +1,3 @@
-import Search from './Search.vue'
 import '@/style/common.less'
-export {
-  Search
-}
+  
+export { default as Search } from './Search.vue'
